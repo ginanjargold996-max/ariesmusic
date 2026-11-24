@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aries Music Entertainment — Profesional Music Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection:bg-crimson selection:text-white">
+
+
+  <!-- Header / Navbar System -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/10 bg-zinc-800/85 lg:bg-obsidian/90 backdrop-blur-xl shadow-lg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="flex items-center justify-between py-4">
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 z-50 group">
+          <div class="brand-logo-container">
+                    <img src="logo.png" alt="Aries Music Entertainment" class="brand-logo-container">
+              </div>
+          <div>
+            <h1 class="font-display text-lg sm:text-xl font-bold text-white leading-none tracking-tight"></h1>
+            <p class="font-mono text-[10px] text-zinc-400 tracking-[0.22em] uppercase mt-1"></p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link active text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Home</a>
+          <a href="about.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">About</a>
+          <div class="relative group py-2">
+            <a href="packages.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold flex items-center gap-1.5">
+              Packages <i class="fas fa-chevron-down text-[10px] text-scarlet transition-transform duration-300 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute top-full left-0 pt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+              <div class="bg-surface/95 backdrop-blur-xl border border-zinc-800 rounded-2xl p-2 shadow-2xl">
+                <a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Acoustic Band Package</span>
+                  <span class="font-mono text-[10px] opacity-60">01</span>
+                </a>
+                <a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Electric Band Package</span>
+                  <span class="font-mono text-[10px] opacity-60">02</span>
+                </a>
+                <a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Exclusive Package</span>
+                  <span class="font-mono text-[10px] opacity-60">03</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="clients.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Clients</a>
+          <a href="gallery.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Gallery</a>
+          <a href="contact.html" class="btn-crimson !py-2.5 !px-5 !rounded-full text-xs">Contact Us</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menuToggle" class="lg:hidden z-50 w-10 h-10 rounded-xl bg-white/[0.06] border border-white/15 flex items-center justify-center text-white text-base hover:border-crimson transition-colors" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Mobile Drawer Menu (Placed outside header to prevent backdrop-filter fixed containment bug) -->
+  <div id="mobileMenu" class="mobile-menu lg:hidden fixed inset-0 bg-zinc-800/90 backdrop-blur-2xl z-40 flex flex-col justify-between p-6 pt-24 pb-8 overflow-y-auto">
+    <div class="flex flex-col gap-1.5">
+      <a href="index.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl bg-zinc-900 text-scarlet text-xl font-display font-bold transition-colors">
+        <span>Home</span>
+        <span class="font-mono text-xs text-crimson">01</span>
+      </a>
+      <a href="about.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-white hover:bg-zinc-900 text-xl font-display font-bold transition-colors">
+        <span>About</span>
+        <span class="font-mono text-xs text-crimson">02</span>
+      </a>
+      <div class="flex flex-col">
+        <a href="packages.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-white hover:bg-zinc-900 text-xl font-display font-bold transition-colors">
+          <span>Packages</span>
+          <span class="font-mono text-xs text-crimson">03</span>
+        </a>
+        <div class="grid grid-cols-3 gap-1.5 pl-4 pr-2 pt-1 pb-2">
+          <a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link mobile-link px-3 py-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Acoustic</a>
+          <a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link mobile-link px-3 py-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Electric</a>
+          <a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link mobile-link px-3 py-2 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Exclusive</a>
+        </div>
+      </div>
+      <a href="clients.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-white hover:bg-zinc-900 text-xl font-display font-bold transition-colors">
+        <span>Clients</span>
+        <span class="font-mono text-xs text-crimson">04</span>
+      </a>
+      <a href="gallery.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-white hover:bg-zinc-900 text-xl font-display font-bold transition-colors">
+        <span>Gallery</span>
+        <span class="font-mono text-xs text-crimson">05</span>
+      </a>
+      <a href="contact.html" class="mobile-link flex items-center justify-between px-4 py-3.5 rounded-xl text-white hover:bg-zinc-900 text-xl font-display font-bold transition-colors">
+        <span>Contact</span>
+        <span class="font-mono text-xs text-crimson">06</span>
+      </a>
+    </div>
+
+    <div class="pt-6 mt-4 border-t border-zinc-800">
+      <a href="https://wa.me/628562260285" target="_blank" rel="noopener noreferrer" class="btn-crimson w-full text-xs">
+        <i class="fab fa-whatsapp mr-2 text-base"></i> Konsultasi Sekarang
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section: Contemporary Dark Stage + Bento Showcase -->
+  <section id="home" class="relative min-h-screen bg-obsidian flex items-center overflow-hidden pt-28 pb-16">
+    <!-- Ambient Background Image + Modern Radial Crimson Spotlight -->
+    <div class="absolute inset-0">
+      <img src="pic1.jpeg" alt="Aries Music Live Stage" class="w-full h-full object-cover grayscale contrast-125 opacity-25 scale-105" id="heroBgImg">
+      <div class="absolute inset-0 bg-gradient-to-b from-obsidian/80 via-obsidian/90 to-obsidian"></div>
+      <div class="absolute -top-24 right-1/4 w-[520px] h-[520px] bg-crimson/20 rounded-full blur-[130px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-10 w-[380px] h-[380px] bg-white/[0.04] rounded-full blur-[110px] pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 w-full">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7">
+          <!-- Audio Visualizer Pill Badge -->
+
+          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white font-bold leading-[0.98] tracking-tight mb-6 animate-hero" style="animation-delay: 0.12s;">
+            Aries Music Entertainment<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-scarlet"></span>
+          </h1>
+
+          <p class="text-zinc-300 text-base sm:text-lg md:text-xl font-normal max-w-xl leading-relaxed mb-5 animate-hero" style="animation-delay: 0.24s;">
+            Premium Music Service untuk Wedding, Gathering, Gala Dinner, Event &amp; Anniversary. Dari Acoustic hingga Orchestra.
+          </p>
+
+          <div class="inline-flex items-center gap-2.5 text-zinc-400 text-xs sm:text-sm mb-9 animate-hero" style="animation-delay: 0.34s;">
+            <i class="fas fa-check-circle text-scarlet"></i>
+            <span>Include Sound System 3.000–10.000W &amp; Free Consultation</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 animate-hero" style="animation-delay: 0.44s;">
+            <a href="packages.html" class="btn-crimson">
+              Lihat Pricelist <i class="fas fa-arrow-right ml-2.5 text-xs"></i>
+            </a>
+            <a href="https://wa.me/628562260285" target="_blank" rel="noopener noreferrer" class="btn-glass-light">
+              <i class="fab fa-whatsapp mr-2.5 text-scarlet text-base"></i>Konsultasi Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Bento Stage Card -->
+        <div class="lg:col-span-5 animate-hero" style="animation-delay: 0.52s;">
+          <div class="rounded-3xl border border-zinc-800 bg-surface/90 backdrop-blur-xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-crimson/15 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between mb-6">
+              <span class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-scarlet font-semibold">
+                <span class="w-2 h-2 rounded-full bg-scarlet animate-pulse"></span> Live Stage Ready
+              </span>
+              <span class="font-mono text-xs text-zinc-500">ID / JKT — BDG</span>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden border border-zinc-800 mb-6 relative group">
+              <img src="homebg.jpeg" alt="Live Band Performance" class="w-full h-52 object-cover grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-widest text-zinc-300">Perfection on Performance</p>
+                  <p class="font-display text-lg font-bold text-white">Acoustic • Electric • Orchestra</p>
+                </div>
+                <a href="packages.html" class="w-9 h-9 rounded-full bg-crimson text-white flex items-center justify-center hover:scale-110 transition-transform" aria-label="Explore Packages">
+                  <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800/90 p-4">
+                <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-400 mb-1">Audio Output</p>
+                <p class="font-display text-lg font-bold text-white">3.000–10.000W</p>
+              </div>
+              <div class="rounded-2xl bg-zinc-900/90 border border-zinc-800/90 p-4">
+                <p class="font-mono text-[10px] uppercase tracking-wider text-zinc-400 mb-1">Music Playback</p>
+                <p class="font-display text-lg font-bold text-white">All Packages</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Bento Stats Bar -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-14 pt-10 border-t border-zinc-800/80 animate-hero" style="animation-delay: 0.62s;">
+        <div class="rounded-2xl bg-surface/80 border border-zinc-800/80 p-5 sm:p-6 hover:border-crimson/60 transition-colors">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">44+<span class="text-scarlet"></span></p>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-400 mt-1.5">Corporate Clients</p>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-zinc-800/80 p-5 sm:p-6 hover:border-crimson/60 transition-colors">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">16+<span class="text-scarlet"></span></p>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-400 mt-1.5">Package Options</p>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-zinc-800/80 p-5 sm:p-6 hover:border-crimson/60 transition-colors">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">250+<span class="text-scarlet"></span></p>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-400 mt-1.5">Events Completed</p>
+        </div>
+        <div class="rounded-2xl bg-surface/80 border border-zinc-800/80 p-5 sm:p-6 hover:border-crimson/60 transition-colors">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">30+<span class="text-scarlet"></span></p>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-zinc-400 mt-1.5">Professional Musicians</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-obsidian text-white pt-20 pb-10 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="brand-logo-container">
+              <img src="logo.png" alt="Aries Music Entertainment" class="brand-logo-container">
+            </div>
+            <div>
+              <h3 class="font-display text-xl font-bold leading-none"></h3>
+              <p class="font-mono text-[10px] text-zinc-400 tracking-[0.22em] uppercase mt-1"></p>
+            </div>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed">
+            Premium Music Service untuk Wedding, Gathering, Gala Dinner, Event &amp; Anniversary. Dari Acoustic hingga Orchestra.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Home</a></li>
+            <li><a href="about.html" class="text-zinc-400 hover:text-white transition-colors text-sm">About Us</a></li>
+            <li><a href="packages.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Price List</a></li>
+            <li><a href="clients.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Our Clients</a></li>
+            <li><a href="gallery.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Gallery</a></li>
+            <li><a href="contact.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Our Packages</h4>
+          <ul class="space-y-3">
+            <li><a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Acoustic Band</a></li>
+            <li><a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Electric Band</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Band Combo</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Big Band</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Chamber</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Orchestra</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Contact</h4>
+          <ul class="space-y-3.5 mb-6">
+            <li class="flex items-start gap-3 text-sm text-zinc-400">
+              <i class="fas fa-phone text-scarlet mt-1"></i>
+              <div>
+                <a href="tel:08562260285" class="hover:text-white transition-colors block">0856-2260-285</a>
+                <a href="tel:087822527314" class="hover:text-white transition-colors block">0878-2252-7314</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-400">
+              <i class="fas fa-envelope text-scarlet"></i>
+              <a href="mailto:ariesmusicent@yahoo.com" class="hover:text-white transition-colors">ariesmusicent@yahoo.com</a>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-400">
+              <i class="fab fa-instagram text-scarlet"></i>
+              <a href="https://www.instagram.com/ariesmusicentertainment" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">@ariesmusicentertainment</a>
+            </li>
+          </ul>
+          <a href="https://wa.me/628562260285" target="_blank" rel="noopener noreferrer" class="btn-crimson !py-2.5 !px-5">
+            <i class="fab fa-whatsapp mr-2"></i> Konsultasi Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-500 text-xs font-mono">
+        <p>© 2026 Aries Music Entertainment. All Rights Reserved.</p>
+        <p>Aries Music Entertainment</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="fixed bottom-24 right-6 w-11 h-11 rounded-full bg-white text-obsidian border border-zinc-200 shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-crimson hover:text-white hover:border-crimson z-40" aria-label="Back to Top">
+    <i class="fas fa-arrow-up text-xs"></i>
+  </button>
+
+  <!-- Gallery Lightbox Modal with Prev/Next Navigation -->
+  <div id="lightboxModal" class="fixed inset-0 bg-obsidian/95 z-[100] hidden items-center justify-center p-4 md:p-10 backdrop-blur-xl">
+    <button id="closeLightbox" class="absolute top-6 right-6 w-11 h-11 rounded-full bg-zinc-900 border border-zinc-800 text-white hover:bg-crimson hover:border-crimson transition-colors flex items-center justify-center text-base" aria-label="Close Gallery">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <button id="prevLightbox" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-800 text-white hover:bg-crimson hover:border-crimson transition-colors flex items-center justify-center text-sm" aria-label="Previous Image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="max-w-5xl w-full px-8">
+      <img id="lightboxImg" src="" alt="Gallery Preview" class="w-full max-h-[78vh] object-contain mx-auto rounded-2xl border border-zinc-800">
+      <div class="flex items-center justify-center gap-4 mt-4">
+        <span id="lightboxCounter" class="font-mono text-xs text-scarlet">01 / 14</span>
+        <span class="text-zinc-700">•</span>
+        <p id="lightboxCaption" class="font-mono text-xs uppercase tracking-[0.18em] text-zinc-300"></p>
+      </div>
+    </div>
+
+    <button id="nextLightbox" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-800 text-white hover:bg-crimson hover:border-crimson transition-colors flex items-center justify-center text-sm" aria-label="Next Image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
