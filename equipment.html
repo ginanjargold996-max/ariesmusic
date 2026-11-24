@@ -1,0 +1,682 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Band & Sound System — Aries Music Entertainment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection:bg-crimson selection:text-white">
+
+  <!-- Header / Navbar System -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/10 bg-zinc-800/85 lg:bg-obsidian/90 backdrop-blur-xl shadow-lg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="flex items-center justify-between py-4">
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 z-50 group">
+          <div class="brand-logo-container">
+            <img src="logo.png" alt="Aries Music Entertainment" class="brand-logo-container">
+          </div>
+          <div>
+            <h1 class="font-display text-lg sm:text-xl font-bold text-white leading-none tracking-tight"></h1>
+            <p class="font-mono text-[10px] text-zinc-400 tracking-[0.22em] uppercase mt-1"></p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Home</a>
+          <a href="about.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">About</a>
+          <div class="relative group py-2">
+            <a href="packages.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold flex items-center gap-1.5">
+              Packages <i class="fas fa-chevron-down text-[10px] text-scarlet transition-transform duration-300 group-hover:rotate-180"></i>
+            </a>
+            <div class="absolute top-full left-0 pt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+              <div class="bg-surface/95 backdrop-blur-xl border border-zinc-800 rounded-2xl p-2 shadow-2xl">
+                <a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Acoustic Band Package</span>
+                  <span class="font-mono text-[10px] opacity-60">01</span>
+                </a>
+                <a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Electric Band Package</span>
+                  <span class="font-mono text-[10px] opacity-60">02</span>
+                </a>
+                <a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link flex items-center justify-between px-4 py-3 rounded-xl text-zinc-200 text-xs font-medium hover:bg-crimson hover:text-white transition-colors">
+                  <span>Exclusive Package</span>
+                  <span class="font-mono text-[10px] opacity-60">03</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="equipment.html" class="nav-link active text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Equipment</a>
+          <a href="clients.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Clients</a>
+          <a href="gallery.html" class="nav-link text-zinc-300 text-xs uppercase tracking-[0.14em] font-semibold">Gallery</a>
+          <a href="contact.html" class="btn-crimson !py-2.5 !px-5 !rounded-full text-xs">Contact Us</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menuToggle" class="lg:hidden z-50 w-10 h-10 rounded-xl bg-white/[0.06] border border-white/15 flex items-center justify-center text-white text-base hover:border-crimson transition-colors" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="mobile-menu lg:hidden fixed inset-0 bg-zinc-800/90 backdrop-blur-2xl z-40 flex flex-col justify-between px-5 pt-24 pb-7 overflow-y-auto">
+    <div class="flex flex-col gap-2">
+      <a href="index.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-house text-xs text-scarlet w-4 text-center"></i>Home</span>
+        <span class="font-mono text-[11px] text-zinc-400">01</span>
+      </a>
+
+      <a href="about.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-award text-xs text-scarlet w-4 text-center"></i>About</span>
+        <span class="font-mono text-[11px] text-zinc-400">02</span>
+      </a>
+
+      <div class="rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 p-1.5 transition-all">
+        <a href="packages.html" class="mobile-link flex items-center justify-between px-2.5 py-2 rounded-lg text-base font-display font-bold">
+          <span class="flex items-center gap-3"><i class="fas fa-guitar text-xs text-scarlet w-4 text-center"></i>Packages</span>
+          <span class="font-mono text-[11px] text-zinc-400">03</span>
+        </a>
+        <div class="grid grid-cols-3 gap-1.5 px-1.5 pt-1.5 pb-1">
+          <a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link mobile-link px-2.5 py-2 rounded-lg bg-obsidian/80 border border-white/10 text-zinc-200 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Acoustic</a>
+          <a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link mobile-link px-2.5 py-2 rounded-lg bg-obsidian/80 border border-white/10 text-zinc-200 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Electric</a>
+          <a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link mobile-link px-2.5 py-2 rounded-lg bg-obsidian/80 border border-white/10 text-zinc-200 text-[11px] font-medium text-center hover:border-crimson hover:text-white transition-colors">Exclusive</a>
+        </div>
+      </div>
+
+      <a href="equipment.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/90 border-crimson/50 text-scarlet text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-sliders text-xs text-scarlet w-4 text-center"></i>Equipment</span>
+        <span class="font-mono text-[11px] text-zinc-400">04</span>
+      </a>
+
+      <a href="clients.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-building text-xs text-scarlet w-4 text-center"></i>Clients</span>
+        <span class="font-mono text-[11px] text-zinc-400">05</span>
+      </a>
+
+      <a href="gallery.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-camera-retro text-xs text-scarlet w-4 text-center"></i>Gallery</span>
+        <span class="font-mono text-[11px] text-zinc-400">06</span>
+      </a>
+
+      <a href="contact.html" class="mobile-link flex items-center justify-between px-4 py-3 rounded-xl border bg-zinc-900/40 border-white/5 text-white hover:bg-zinc-900/80 hover:border-white/15 text-base font-display font-bold transition-all">
+        <span class="flex items-center gap-3"><i class="fas fa-envelope text-xs text-scarlet w-4 text-center"></i>Contact</span>
+        <span class="font-mono text-[11px] text-zinc-400">07</span>
+      </a>
+    </div>
+
+    <div class="pt-5 mt-4 border-t border-white/10 flex flex-col gap-3">
+      <a href="https://wa.me/628562260285" target="_blank" rel="noopener noreferrer" class="btn-crimson w-full text-xs !py-3">
+        <i class="fab fa-whatsapp mr-2 text-base"></i> Konsultasi Sekarang
+      </a>
+      <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400 px-1">
+        <span>0856-2260-285</span>
+        <span>@ariesmusicentertainment</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Banner Equipment Section -->
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-24 bg-obsidian text-white relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="pic (8).jpeg" alt="Aries Music Equipment Stage" class="w-full h-full object-cover grayscale contrast-125 opacity-20">
+      <div class="absolute inset-0 bg-gradient-to-b from-obsidian/85 via-obsidian/90 to-obsidian"></div>
+      <div class="absolute -top-20 right-1/3 w-[440px] h-[440px] bg-crimson/20 rounded-full blur-[130px] pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 reveal">
+          <div class="inline-flex items-center gap-2.5 rounded-full bg-zinc-900 border border-zinc-800 px-4 py-1.5 mb-5">
+            <span class="w-2 h-2 rounded-full bg-scarlet animate-pulse"></span>
+            <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-300 font-semibold">Technical Rider &amp; Gear</span>
+          </div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-5">
+            Band <span class="text-scarlet">Equipment</span> &amp; Sound System
+          </h1>
+          <p class="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
+            Standar produksi audio panggung profesional dengan instrumen musik kelas konser, sistem mikrofon wireless jernih, digital mixing console, dan sound system berdaya 3.000 hingga 10.000 Watt.
+          </p>
+          <div class="flex flex-wrap gap-3.5">
+            <a href="#sound-system" class="btn-crimson">
+              Spesifikasi Sound <i class="fas fa-sliders ml-2 text-xs"></i>
+            </a>
+            <a href="https://wa.me/628562260285?text=Halo%20Aries%20Music,%20saya%20ingin%20konsultasi%20mengenai%20Equipment%20Band%20%26%20Sound%20System" target="_blank" rel="noopener noreferrer" class="btn-glass-light">
+              <i class="fab fa-whatsapp mr-2 text-scarlet text-base"></i>Request Technical Rider
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal">
+          <div class="rounded-3xl bg-surface/90 border border-zinc-800 p-6 shadow-2xl">
+            <div class="grid grid-cols-2 gap-3 mb-3">
+              <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/3]">
+                <img src="pic (3).jpeg" alt="Grand Piano & Stage Gear" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/3]">
+                <img src="pic (5).jpeg" alt="Brass & Band Instruments" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2.5 text-center">
+              <div class="rounded-xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <p class="font-display text-lg font-bold text-white">3K–10KW</p>
+                <p class="font-mono text-[10px] uppercase text-zinc-400">FOH Output</p>
+              </div>
+              <div class="rounded-xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <p class="font-display text-lg font-bold text-white">32 Ch</p>
+                <p class="font-mono text-[10px] uppercase text-zinc-400">Digital Mixer</p>
+              </div>
+              <div class="rounded-xl bg-zinc-900/90 border border-zinc-800 p-3">
+                <p class="font-display text-lg font-bold text-white">100%</p>
+                <p class="font-mono text-[10px] uppercase text-zinc-400">Pro Backline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter Tabs for Equipment -->
+  <section class="py-24 lg:py-28 bg-mist">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full bg-white border border-zinc-200 px-3.5 py-1.5 mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-crimson"></span>
+          <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-700 font-semibold">Backline &amp; Instruments</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-obsidian tracking-tight mb-3">
+          Daftar <span class="text-crimson">Equipment Band</span>
+        </h2>
+        <p class="text-zinc-600 text-sm sm:text-base">
+          Instrumen dan perlengkapan panggung lengkap yang kami sediakan untuk menjamin kualitas artistik dan kejernihan suara terbaik
+        </p>
+      </div>
+
+      <!-- Segmented Pill Switcher -->
+      <div class="flex justify-center mb-12 reveal">
+        <div class="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl sm:rounded-full bg-white border border-zinc-200 shadow-sm">
+          <button type="button" class="tab-btn active" data-tab="eq-keys">Keys &amp; Strings</button>
+          <button type="button" class="tab-btn" data-tab="eq-rhythm">Guitar, Bass &amp; Drums</button>
+          <button type="button" class="tab-btn" data-tab="eq-orchestra">Brass &amp; Orchestra</button>
+          <button type="button" class="tab-btn" data-tab="eq-audio">Microphones &amp; FOH Mixer</button>
+        </div>
+      </div>
+
+      <!-- TAB 1: Keys & Strings -->
+      <div id="eq-keys" class="tab-content active">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Grand Piano -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (3).jpeg" alt="Grand Piano Shell & Stage Piano" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Exclusive Gear</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Keyboards &amp; Piano</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Grand Piano &amp; Stage Piano</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Tampilan mewah Baby Grand Piano untuk paket Mini Chamber, Chamber, dan Orchestra maupun Portable Stage Piano 88-keys weighted action.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Grand Piano Acoustic / Baby Grand Shell</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>88-Keys Weighted Hammer Action Piano</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Stereo Direct Box (DI) &amp; Sustain Pedal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthesizer & Keyboard -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (2).jpeg" alt="Workstation Keyboard" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">All Electric Packages</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Synthesizer</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Workstation Keyboard</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Keyboard synthesizer profesional dengan bank suara lengkap untuk kebutuhan pop, jazz, R&amp;B, hingga cinematic hits.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Roland / Yamaha / Korg Pro Workstation</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Keyboard Amplifier Monitor &amp; Dual Tier Stand</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Music Playback &amp; Backing Track Interface</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concert Harp -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (11).jpeg" alt="Concert Harp" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-crimson text-white font-mono text-[10px] uppercase px-3 py-1">Signature</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Classical Plucked String</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Concert &amp; Lever Harpa</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Instrumen harpa elegan yang memberikan nuansa megah, romantis, dan eksklusif pada paket Band Combo, Chamber, dan Orchestra.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Full Concert / Pedal &amp; Lever Harp</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Dedicated Condenser Pickup &amp; Preamp</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Visual Stage Centerpiece untuk Wedding &amp; Gala</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: Guitar, Bass & Drums -->
+      <div id="eq-rhythm" class="tab-content">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Acoustic & Electric Guitars -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (4).jpeg" alt="Acoustic & Electric Guitars" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Acoustic &amp; Electric</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Guitars &amp; Amply</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Guitar Acoustic &amp; Electric</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Gitar akustik-elektrik bersuara hangat serta gitar elektrik dengan multi-effect processor dan amplifier kabinet.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Taylor / Yamaha / Fender Acoustic-Electric</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Electric Guitar + Multi-FX Modeler</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Roland Jazz Chorus / Fender Guitar Amply</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electric & Acoustic Bass -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (6).jpeg" alt="Electric Bass & Amp" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Low-End Section</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Bass Section</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">4 &amp; 5-String Electric Bass</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Fondasi groove yang solid dan punchy dengan bass elektrik 5-senar serta bass combo amplifier berdaya tinggi.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Fender / MusicMan / Sire 5-String Jazz Bass</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>dedicated Bass Preamp &amp; Active DI Box</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Hartke / Ampeg / Markbass Bass Amplifier</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drums & Percussion -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (9).jpeg" alt="Drum Set & Percussion" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Rhythm &amp; Groove</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Drums &amp; Percussion</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Acoustic Drum, Electric &amp; Cajon</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Fleksibilitas set ritmik sesuai venue: Cajon &amp; Drum Pad untuk ruangan intimate, Electric Drum, hingga Full Acoustic Drum Set.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Full Acoustic Drum Set + Cymbal Brass Set</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Roland V-Drums Electric &amp; SPD-SX Sampling Pad</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Spanish Cajon, Conga, Chimes &amp; Latin Percussion</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: Brass & Orchestra -->
+      <div id="eq-orchestra" class="tab-content">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- String Ensemble -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (10).jpeg" alt="Violin, Viola & Cello Section" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-crimson text-white font-mono text-[10px] uppercase px-3 py-1">Chamber &amp; Orchestra</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Bowed Strings</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Violin, Viola &amp; Cello Section</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Ansambel string klasik hingga 4 Violin, 2 Viola, dan 2 Cello yang dilengkapi clip-on condenser microphone khusus instrumen gesek.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Acoustic &amp; Electric Violin (1–4 Players)</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Warm Alto Viola &amp; Concert Violoncello</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Dedicated Clip-On Instrument Condenser Mics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brass Section -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (7).jpeg" alt="Brass Section" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Big Band &amp; Orchestra</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Horns &amp; Brass</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Saxophone, Trumpet &amp; Trombone</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Lini tiup penuh energi untuk paket Big Band, Chamber, dan Orchestra yang menghadirkan aransemen brass section megah.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Saxophone Alto &amp; Saxophone Tenor</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Bb Concert Trumpet &amp; Tenor Slide Trombone</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Wireless Clip-On Horn Microphones</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Woodwind & Flute -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (12).jpeg" alt="Concert Flute & Woodwinds" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Orchestra</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Woodwinds</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Concert Flute &amp; Woodwind</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Sentuhan melodi flute orkestra yang lembut dan bernuansa sinematik untuk melengkapi harmoni paket Full Orchestra.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Silver Concert C-Flute</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>High-Sensitivity Condenser Microphone</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Music Stand &amp; LED Score Lighting Set</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: Microphones & FOH Mixer -->
+      <div id="eq-audio" class="tab-content">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Digital Mixing Console -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (13).jpeg" alt="Digital Mixing Console" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-crimson text-white font-mono text-[10px] uppercase px-3 py-1">FOH Control</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Mixing Console</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Digital Mixer 32-Channel</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Kendali penuh keseimbangan audio FOH dan monitor panggung menggunakan digital mixer profesional yang dioperasikan Sound Engineer berpengalaman.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>32-Channel Digital Mixing Console + Digital Stagebox</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Multi-Band Parametric EQ &amp; Dynamics per Channel</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Dedicated FOH Sound Engineer &amp; Crew</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wireless Vocal Microphones -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic1.jpeg" alt="Wireless Vocal Microphones" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">Vocal &amp; MC</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Vocal Gear</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Pro Wireless Microphones</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Mikrofon wireless UHF untuk vokalis utama dan MC acara dengan transmisi stabil bebas interferensi serta jangkauan panggung luas.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Shure / Sennheiser UHF Wireless Handheld Mics</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Dynamic &amp; Condenser Instrument Mic Kit</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>In-Ear Monitor (IEM) &amp; Active Floor Wedge Monitors</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOH Speakers & Subwoofers -->
+          <div class="package-card rounded-3xl bg-white border border-zinc-200 overflow-hidden flex flex-col justify-between reveal">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-obsidian">
+                <img src="pic (1).jpeg" alt="FOH Speakers & Subwoofers" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="absolute top-3.5 right-3.5 rounded-full bg-obsidian/90 text-white font-mono text-[10px] uppercase px-3 py-1 border border-zinc-700">PA System</span>
+              </div>
+              <div class="p-7">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-crimson font-semibold">Speaker System</span>
+                <h3 class="font-display text-2xl font-bold text-obsidian mt-1 mb-3">Active FOH &amp; Subwoofer Array</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-5">
+                  Distribusi suara merata ke seluruh ballroom maupun outdoor venue tanpa memekakkan telinga tamu di barisan depan.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-zinc-700">
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Active 2-Way / Line Array FOH Tops</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>18-Inch High-Power Active Subwoofers</li>
+                  <li class="flex items-center gap-2.5"><i class="fas fa-check text-crimson text-xs"></i>Front-Fill &amp; Delay Speaker Ready</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sound System Wattage Tier Comparison -->
+  <section id="sound-system" class="py-24 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 reveal">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-mist border border-zinc-200 px-3.5 py-1.5 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-crimson"></span>
+            <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-700 font-semibold">Sound Output Tiers</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-bold text-obsidian tracking-tight">
+            Kapasitas <span class="text-crimson">Sound System</span>
+          </h2>
+        </div>
+        <p class="text-zinc-500 text-sm mt-3 md:mt-0">
+          Setiap paket musik Aries Music sudah termasuk Sound System sesuai skala formasi
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 3.000 Watt -->
+        <div class="package-card rounded-3xl bg-mist/70 border border-zinc-200 p-7 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs uppercase tracking-wider text-crimson font-semibold">Tier 01</span>
+              <span class="rounded-full bg-white border border-zinc-200 font-mono text-[10px] px-3 py-1 text-zinc-600">100–300 Pax</span>
+            </div>
+            <h3 class="font-display text-3xl font-bold text-obsidian mb-1">3.000 Watt</h3>
+            <p class="font-mono text-xs text-zinc-500 pb-5 mb-5 border-b border-zinc-200">Acoustic &amp; Electric Package</p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-zinc-700 mb-8">
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>2x Active FOH Speaker 15" + 2x Subwoofer 18"</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>2–3x Stage Floor Monitor</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Digital Mixer &amp; Wireless Vocal Mics</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Ideal untuk Intimate Wedding, Cafe &amp; Gathering</span></li>
+            </ul>
+          </div>
+          <a href="packages.html#acoustic" class="btn-outline-modern w-full">Lihat Paket 3.000W</a>
+        </div>
+
+        <!-- 5.000 Watt -->
+        <div class="package-card rounded-3xl bg-white border border-zinc-200 p-7 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs uppercase tracking-wider text-crimson font-semibold">Tier 02</span>
+              <span class="rounded-full bg-mist border border-zinc-200 font-mono text-[10px] px-3 py-1 text-zinc-600">300–600 Pax</span>
+            </div>
+            <h3 class="font-display text-3xl font-bold text-obsidian mb-1">5.000 Watt</h3>
+            <p class="font-mono text-xs text-zinc-500 pb-5 mb-5 border-b border-zinc-100">Band Combo, Big Band &amp; Mini Chamber</p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-zinc-700 mb-8">
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>4x Active FOH Speaker + 2–4x Subwoofer 18"</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>4x Stage Monitor + Full Backline</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Multi-Mic Setup untuk Brass, Strings &amp; Harpa</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Ideal untuk Hotel Ballroom &amp; Corporate Gala</span></li>
+            </ul>
+          </div>
+          <a href="packages.html#exclusive" class="btn-outline-modern w-full">Lihat Paket 5.000W</a>
+        </div>
+
+        <!-- 7.000 Watt -->
+        <div class="package-card rounded-3xl bg-white border-2 border-obsidian p-7 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs uppercase tracking-wider text-crimson font-semibold">Tier 03</span>
+              <span class="rounded-full bg-obsidian text-white font-mono text-[10px] px-3 py-1">600–1.000 Pax</span>
+            </div>
+            <h3 class="font-display text-3xl font-bold text-obsidian mb-1">7.000 Watt</h3>
+            <p class="font-mono text-xs text-zinc-500 pb-5 mb-5 border-b border-zinc-100">Chamber Exclusive Package</p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-zinc-700 mb-8">
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>High-Output FOH Array + 4x Subwoofer 18"</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Include Full Guitar/Bass Amply &amp; Drum Acoustic</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>6x Monitor Mix + Dedicated Condenser Mics</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-crimson text-xs mt-1"></i><span>Ideal untuk Grand Ballroom &amp; Awarding Night</span></li>
+            </ul>
+          </div>
+          <a href="packages.html#exclusive" class="btn-crimson w-full">Lihat Paket 7.000W</a>
+        </div>
+
+        <!-- 10.000 Watt -->
+        <div class="package-card rounded-3xl bg-obsidian text-white border border-zinc-800 p-7 flex flex-col justify-between relative overflow-hidden reveal">
+          <div class="absolute -right-8 -top-8 w-36 h-36 bg-crimson/25 rounded-full blur-2xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs uppercase tracking-wider text-scarlet font-semibold">Tier 04</span>
+              <span class="rounded-full bg-crimson text-white font-mono text-[10px] px-3 py-1 font-semibold">1.000+ Pax</span>
+            </div>
+            <h3 class="font-display text-3xl font-bold text-white mb-1">10.000 Watt</h3>
+            <p class="font-mono text-xs text-zinc-400 pb-5 mb-5 border-b border-zinc-800">Full Orchestra Production</p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-zinc-300 mb-8">
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-scarlet text-xs mt-1"></i><span>Full Line Array System + Dual 18" Subwoofers</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-scarlet text-xs mt-1"></i><span>32-Ch Digital Console + Full Orchestra Mic Kit</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-scarlet text-xs mt-1"></i><span>Include Grand Piano, Harpa, Amply &amp; Drum Acoustic</span></li>
+              <li class="flex items-start gap-2.5"><i class="fas fa-check text-scarlet text-xs mt-1"></i><span>Ideal untuk Convention Hall &amp; Grand Concert</span></li>
+            </ul>
+          </div>
+          <a href="packages.html#exclusive" class="btn-crimson w-full">Lihat Paket 10.000W</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian text-white pt-20 pb-10 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="brand-logo-container">
+              <img src="logo.png" alt="Aries Music Entertainment" class="brand-logo-container">
+            </div>
+            <div>
+              <h3 class="font-display text-xl font-bold leading-none"></h3>
+              <p class="font-mono text-[10px] text-zinc-400 tracking-[0.22em] uppercase mt-1"></p>
+            </div>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed">
+            Premium Music Service untuk Wedding, Gathering, Gala Dinner, Event &amp; Anniversary. Dari Acoustic hingga Orchestra.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Home</a></li>
+            <li><a href="about.html" class="text-zinc-400 hover:text-white transition-colors text-sm">About Us</a></li>
+            <li><a href="packages.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Price List</a></li>
+            <li><a href="equipment.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Equipment Band</a></li>
+            <li><a href="clients.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Our Clients</a></li>
+            <li><a href="gallery.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Gallery</a></li>
+            <li><a href="contact.html" class="text-zinc-400 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Our Packages</h4>
+          <ul class="space-y-3">
+            <li><a href="packages.html#acoustic" data-nav-tab="acoustic" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Acoustic Band</a></li>
+            <li><a href="packages.html#electric" data-nav-tab="electric" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Electric Band</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Band Combo</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Big Band</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Chamber</a></li>
+            <li><a href="packages.html#exclusive" data-nav-tab="exclusive" class="package-dropdown-link text-zinc-400 hover:text-white transition-colors text-sm">Orchestra</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-[0.18em] text-scarlet mb-5">Contact</h4>
+          <ul class="space-y-3.5 mb-6">
+            <li class="flex items-start gap-3 text-sm text-zinc-400">
+              <i class="fas fa-phone text-scarlet mt-1"></i>
+              <div>
+                <a href="tel:08562260285" class="hover:text-white transition-colors block">0856-2260-285</a>
+                <a href="tel:087822527314" class="hover:text-white transition-colors block">0878-2252-7314</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-400">
+              <i class="fas fa-envelope text-scarlet"></i>
+              <a href="mailto:ariesmusicent@yahoo.com" class="hover:text-white transition-colors">ariesmusicent@yahoo.com</a>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-400">
+              <i class="fab fa-instagram text-scarlet"></i>
+              <a href="https://www.instagram.com/ariesmusicentertainment" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">@ariesmusicentertainment</a>
+            </li>
+          </ul>
+          <a href="https://wa.me/628562260285" target="_blank" rel="noopener noreferrer" class="btn-crimson !py-2.5 !px-5">
+            <i class="fab fa-whatsapp mr-2"></i> Konsultasi Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-500 text-xs font-mono">
+        <p>© 2026 Aries Music Entertainment. All Rights Reserved.</p>
+        <p>Aries Music Entertainment</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="fixed bottom-24 right-6 w-11 h-11 rounded-full bg-white text-obsidian border border-zinc-200 shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-crimson hover:text-white hover:border-crimson z-40" aria-label="Back to Top">
+    <i class="fas fa-arrow-up text-xs"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
